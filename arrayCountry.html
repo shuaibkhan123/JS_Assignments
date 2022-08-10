@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Create a array of country objects having name capital and population as properties.
+    Print the countries whose population is less than 2000</h2>
+    <p>
+        let country=[
+            {
+                name:"India",
+                capital:"Delhi",
+                population:"1380"
+            },<br>
+            {
+                name:"United Kingdom",
+                capital:"London",
+                population:"2244"
+            },<br>
+            {
+                name:"Australia",
+                capital:"Canberra",
+                population:"2234"
+            },<br>
+            {
+                name:"Russia",
+                capital:"Moscow",
+                population:"342"
+            }
+        ]<br>
+        for(let i=0;i<4;i++){<br>
+            if(country[i].population<2000)<br>
+            {
+                console.log(country[i].name);
+            }<br>
+        }
+        <p>check console on developer tools for output</p>
+    </p>
+    <script>
+        let country=[
+            {
+                name:"India",
+                capital:"Delhi",
+                population:"1380"
+            },
+            {
+                name:"United Kingdom",
+                capital:"London",
+                population:"2244"
+            },
+            {
+                name:"Australia",
+                capital:"Canberra",
+                population:"2234"
+            },
+            {
+                name:"Russia",
+                capital:"Moscow",
+                population:"342"
+            }
+        ]
+        for(let i=0;i<4;i++){
+            if(country[i].population<2000)
+            {
+                console.log(country[i].name);
+            }
+        }
+    </script>
+</body>
+</html>
