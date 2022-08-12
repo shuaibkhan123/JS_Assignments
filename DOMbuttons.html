@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom_buttons</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            width:100vw;
+            padding:50px;
+        }
+        .container{
+            background-color:burlywood;
+            height:400px;
+            width:400px;
+            position: relative;
+        }
+        button{
+            cursor:pointer;
+            padding: 10px;
+            margin:30px 20px 0px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="continerButton">
+        <button class="b1" onclick="colorChange()" >Color</button>
+        <button class="b2" onclick="sizeChange()">Size</button>
+        <button class="b3" onclick="addImg()">Add Image</button>
+        <button class="b4" onclick="rmvImg()">Remove Image</button>
+    </div>
+    <script>
+        function colorChange(){
+            document.querySelector(".container").style.backgroundColor="grey";
+        }
+
+        function sizeChange(){
+            document.querySelector(".container").style.width="600px";
+        }
+
+        function addImg(){
+            document.querySelector(".container").innerHTML='<img class="rmv" src='+img.src+' style="height:200px; width:400px;"/>';
+        }
+        let img= new Image();
+        img.src='https://cdn.motor1.com/images/mgl/WO7qr/s3/bugatti-chiron-super-sport-300-exterior.webp';
+    
+        function rmvImg(){
+            // document.querySelector(".container").innerHTML='<img src=""/>' This works as well! ;
+            document.querySelector(".rmv").parentNode.removeChild(document.querySelector(".rmv"));
+        }
+    </script>
+</body>
+</html>
